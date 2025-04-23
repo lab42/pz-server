@@ -2,9 +2,6 @@ version: 2
 project_name: pz-server
 builds:
   - skip: true
-before:
-  hooks:
-    - make build
 dockers:
   - use: buildx
     goos: linux
