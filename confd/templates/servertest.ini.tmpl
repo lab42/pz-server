@@ -1,0 +1,14 @@
+DefaultPort={{ getenv "PZSERVER_PORT" }}
+PublicName={{ getenv "PZSERVER_NAME" }}
+PublicDescription=Project Zomboid Server running in Docker
+Password={{ getenv "PZSERVER_PASSWORD" }}
+MaxPlayers={{ getenv "PZSERVER_MAX_PLAYERS" }}
+PVP=false
+PauseEmpty=true
+GlobalChat=true
+Open=true
+ServerWelcomeMessage=Welcome to {{ getenv "PZSERVER_NAME" }}!
+Map={{ getenv "PZSERVER_MAP" }}
+{{ if ne (getenv "PZSERVER_MOD_NAMES") "" }}
+Mods={{ getenv "PZSERVER_MOD_NAMES" }}
+{{ end }}

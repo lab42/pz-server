@@ -1,0 +1,11 @@
+[template]
+src = "servertest.ini.tmpl"
+dest = "/opt/pzserver/Zomboid/Server/servertest.ini"
+keys = [
+    "/pzserver/port",
+    "/pzserver/name",
+    "/pzserver/password",
+    "/pzserver/max_players",
+    "/pzserver/map",
+    "/pzserver/mod_names"
+]

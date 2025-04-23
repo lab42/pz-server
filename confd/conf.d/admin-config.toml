@@ -1,0 +1,6 @@
+[template]
+src = "users.txt.tmpl"
+dest = "/opt/pzserver/Zomboid/Server/users.txt"
+keys = [
+    "/pzserver/admin_password"
+]
