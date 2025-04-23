@@ -10,8 +10,8 @@ dockers:
       - confd/
       - scripts/
     image_templates:
-      - ghcr.io/lab42/{{.ProjectName}}:v{{.Version}}-amd64
-      - ghcr.io/lab42/{{.ProjectName}}:latest-amd64
+      - ghcr.io/lab42/{{.ProjectName}}:v{{.Version}}
+      - ghcr.io/lab42/{{.ProjectName}}:latest
     build_flag_templates:
       - "--platform=linux/amd64"
       - "--label=org.opencontainers.image.created={{.Date}}"
