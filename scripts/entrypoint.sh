@@ -1,5 +1,4 @@
 #!/bin/bash
-# /scripts/entrypoint.sh
 
 # Process confd templates
 echo "Processing configuration templates..."

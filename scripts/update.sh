@@ -1,5 +1,4 @@
 #!/bin/bash
-# /scripts/update_server.sh
 
 # Update/install the PZ server
 ${STEAMCMD_PATH}/steamcmd.sh +force_install_dir ${PZSERVER_PATH} +login anonymous +app_update ${STEAMAPPID} validate +quit

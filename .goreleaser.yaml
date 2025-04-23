@@ -1,0 +1,20 @@
+version: 2
+project_name: pz-server
+builds:
+  - skip: true
+before:
+  hooks:
+    - make build
+dockers:
+  - use: buildx
+    goos: linux
+    goarch: amd64
+    image_templates:
+      - ghcr.io/lab42/{{.ProjectName}}:v{{.Version}}-amd64
+      - ghcr.io/lab42/{{.ProjectName}}:latest-amd64
+    build_flag_templates:
+      - "--platform=linux/amd64"
+      - "--label=org.opencontainers.image.created={{.Date}}"
+      - "--label=org.opencontainers.image.revision={{.FullCommit}}"
+      - "--label=org.opencontainers.image.version={{.Version}}"
+      - "--label=org.opencontainers.image.source=https://github.com/lab42/{{.ProjectName}}"

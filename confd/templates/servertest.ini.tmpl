@@ -6,7 +6,7 @@ MaxPlayers={{ getenv "PZSERVER_MAX_PLAYERS" }}
 PVP=false
 PauseEmpty=true
 GlobalChat=true
-Open=true
+Open={{ getenv "PZSERVER_OPEN_USER_REGISTRATION" }}
 ServerWelcomeMessage=Welcome to {{ getenv "PZSERVER_NAME" }}!
 Map={{ getenv "PZSERVER_MAP" }}
 {{ if ne (getenv "PZSERVER_MOD_NAMES") "" }}

@@ -16,6 +16,7 @@ ENV PZSERVER_MAX_PLAYERS=16
 ENV PZSERVER_MOD_NAMES=""
 ENV PZSERVER_MAP="Muldraugh, KY"
 ENV PZSERVER_MEMORY=2048m
+ENV PZSERVER_OPEN_USER_REGISTRATION=true
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
