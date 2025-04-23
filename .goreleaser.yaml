@@ -6,6 +6,9 @@ dockers:
   - use: buildx
     goos: linux
     goarch: amd64
+    extra_files:
+      - confd/
+      - scripts/
     image_templates:
       - ghcr.io/lab42/{{.ProjectName}}:v{{.Version}}-amd64
       - ghcr.io/lab42/{{.ProjectName}}:latest-amd64
